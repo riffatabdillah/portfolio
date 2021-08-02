@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+   <!-- bootstrap css -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+   <!-- boostrap icons -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+   <!-- data aos -->
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+   <!-- my css -->
+   <link rel="stylesheet" href="style2.css">
+
+   <title>My Portofolio | Riffat Abdillah</title>
+</head>
+
+<body id="home" background="img/bg.jpg" width:"200px";>
+
+   <!-- gallery -->
+   <section id="gallery" class="text-light">
+      <div class="container">
+         <div class="row text-center">
+            <div class="col">
+               <h2>Gallery</h2>
+            </div>
+         </div>
+         <div class="row justify-content-center mb-2">
+            <div class="col-md-3">
+               <a href=""></a>
+               <img src="img/thumbnail/1.JPG" alt="" class="img-fluid gallery-img" />
+            </div>
+            <div class="col-md-3">
+               <a href=""></a>
+               <img src="img/thumbnail/2.JPG" alt="" class="img-fluid gallery-img" />
+            </div>
+            <div class="col-md-3">
+               <a href=""></a>
+               <img src="img/thumbnail/3.JPG" alt="" class="img-fluid gallery-img" />
+            </div>
+            <div class="col-md-3">
+               <a href=""></a>
+               <img src="img/thumbnail/4.JPG" alt="" class="img-fluid gallery-img" />
+            </div>
+            <div class="col-md-3">
+               <a href=""></a>
+               <img src="img/thumbnail/5.JPG" alt="" class="img-fluid gallery-img" />
+            </div>
+            <div class="col-md-3">
+               <a href=""></a>
+               <img src="img/thumbnail/6.JPG" alt="" class="img-fluid gallery-img" />
+            </div>
+            <div class="col-md-3">
+               <a href=""></a>
+               <img src="img/thumbnail/7.JPG" alt="" class="img-fluid gallery-img" />
+            </div>
+            <div class="col-md-3">
+               <a href=""></a>
+               <img src="img/thumbnail/8.JPG" alt="" class="img-fluid gallery-img" />
+            </div>
+         </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+         <path fill="#282830" fill-opacity="1"
+            d="M0,64L48,80C96,96,192,128,288,138.7C384,149,480,139,576,149.3C672,160,768,192,864,181.3C960,171,1056,117,1152,101.3C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+         </path>
+      </svg>
+   </section>
+   <!-- gallery -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+   </script>
+
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+      const galleryImage = document.querySelectorAll('.gallery-img');
+
+      galleryImage.forEach((img, i) => {
+         img.dataset.aos = 'fade-down';
+         img.dataset.aosDelay = i * 100;
+         img.dataset.aosDuration = 1000;
+      })
+
+      AOS.init();
+   </script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/TextPlugin.min.js"></script>
+   <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.lead', {
+         duration: 2,
+         delay: 1.,
+         text: 'Hello Guys, Riffat here',
+      });
+      gsap.from('.jumbotron img', {
+         duration: 1,
+         rotateY: 180,
+         opacity: 0,
+      });
+      gsap.from('.navbar', {
+         duration: 1.5,
+         y: '-100%',
+         opacity: 0,
+      });
+      gsap.from('.display-4', {
+         duration: 1,
+         x: -50,
+         opacity: 0,
+         delay: 0.5,
+         ease: 'back',
+      });
+   </script>
+
+</body>
+
+</html>
